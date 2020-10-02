@@ -7,10 +7,10 @@
     <img src="https://project-logo.png" alt="Logo" width="80">
   </a> -->
 
-  <h3 align="center">YOUR_TITLE</h3>
+  <h3 align="center">IvyHacks</h3>
 
   <p align="center">
-    YOUR_SHORT_DESCRIPTION
+    Your schedule planner, made easy
     <br />
     <a href="https://github.com/Team-Jalapeno/Template"><strong>Explore the docs »</strong></a>
     <br />
