@@ -27,6 +27,7 @@ export interface UserInterface extends mongoose.Document {
 export interface PhraseTimeMapInterface extends mongoose.Document {
     phrase: string;
     time: number;
+    count: number;
 }
 
 const taskMapSchema = new mongoose.Schema({
@@ -85,6 +86,7 @@ const userSchema = new mongoose.Schema({
 const phraseTimeMapSchema = new mongoose.Schema({
     phrase: String,
     time: Number,
+    count: Number,
 });
 
 export const User: Model<UserInterface> = database.model('User', userSchema);

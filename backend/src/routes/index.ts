@@ -27,7 +27,7 @@ router.get('/getPhraseTime', async (req, res) => {
 
     res.json({
         success: true,
-        phrase: '',
+        phrase,
         time,
     });
 });
@@ -38,7 +38,13 @@ router.post('/setPhraseTime', async (req, res) => {
     phrase = phrase.toString();
     time = parseInt(time.toString(), 10);
 
-    await PhraseTimeMap.findOneAndUpdate({ phrase }, { $set: { time } });
+    const phraseTimeMap = await PhraseTimeMap.findOne({ phrase });
+    const { time: oldTime, count } = phraseTimeMap;
+
+    phraseTimeMap.time = (oldTime * count + time) / (count + 1);
+    phraseTimeMap.count += 1;
+
+    await phraseTimeMap.save();
 
     res.json({
         success: true,
