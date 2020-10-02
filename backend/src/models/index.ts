@@ -24,6 +24,11 @@ export interface UserInterface extends mongoose.Document {
     accessToken?: string;
 }
 
+export interface PhraseTimeMapInterface extends mongoose.Document {
+    phrase: string;
+    time: number;
+}
+
 const taskMapSchema = new mongoose.Schema({
     id: {
         type: String,
@@ -77,4 +82,10 @@ const userSchema = new mongoose.Schema({
     },
 });
 
+const phraseTimeMapSchema = new mongoose.Schema({
+    phrase: String,
+    time: Number,
+});
+
 export const User: Model<UserInterface> = database.model('User', userSchema);
+export const PhraseTimeMap: Model<PhraseTimeMapInterface> = database.model('PhraseTimeMap', phraseTimeMapSchema);
