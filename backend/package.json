@@ -12,13 +12,13 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Team-Jalapeno/ivyhacks-backend.git"
+    "url": "git+https://github.com/Team-Jalapeno/ivyhacks.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Team-Jalapeno/ivyhacks-backend/issues"
+    "url": "https://github.com/Team-Jalapeno/ivyhacks/issues"
   },
   "dependencies": {
     "@types/cors": "^2.8.7",
@@ -48,5 +48,5 @@
     "ts-node-dev": "^1.0.0-pre.62",
     "typescript": "^4.0.2"
   },
-  "homepage": "https://github.com/Team-Jalapeno/ivyhacks-backend#readme"
+  "homepage": "https://github.com/Team-Jalapeno/ivyhacks#readme"
 }
