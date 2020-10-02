@@ -1,10 +1,15 @@
 import mongoose from 'mongoose';
 
+import dotenv from 'dotenv';
+
+dotenv.config();
+
 mongoose.Promise = global.Promise;
 
-const database = mongoose.createConnection(`${process.env.MONGO_URL}/${process.env.DB_NAME}?retryWrites=true&w=majority`, {
+const database = mongoose.createConnection(process.env.MONGO_URL, {
     useNewUrlParser: true,
     useCreateIndex: true,
+    useUnifiedTopology: true,
 });
 
 database.once('open', () => {
