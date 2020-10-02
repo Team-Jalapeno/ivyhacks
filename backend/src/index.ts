@@ -1,9 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
-import dotenv from 'dotenv';
 import cors from 'cors';
-
-dotenv.config();
+import routeHandler from './routes';
 
 const app = express();
 
@@ -16,9 +14,7 @@ if (NODE_ENV === 'dev') {
     app.use(cors());
 }
 
-app.use('/', (_req, res) => {
-    res.send('hello world');
-});
+app.use('/', routeHandler);
 
 app.listen(app.get('PORT'), () => {
     console.log('Server listening on port', app.get('PORT'));

@@ -17,4 +17,8 @@ router.get('/sync', async (req: express.Request, res: express.Response) => {
     });
 });
 
+router.get('/', (_req, res) => {
+    res.send('Why you here mate?');
+});
+
 export default router;
