@@ -41,7 +41,7 @@ router.post('/setPhraseTime', async (req, res) => {
     const phraseTimeMap = await PhraseTimeMap.findOne({ phrase });
     const { time: oldTime, count } = phraseTimeMap;
 
-    phraseTimeMap.time = (oldTime * count + time) / (count + 1);
+    phraseTimeMap.time = Math.floor((oldTime * count + time) / (count + 1));
     phraseTimeMap.count += 1;
 
     await phraseTimeMap.save();
