@@ -17,6 +17,7 @@ export interface TaskMap {
 
 export interface UserInterface extends mongoose.Document {
     name: string;
+    username: string;
     email: string;
     premium: boolean;
     tasks: TaskMap;
@@ -52,6 +53,10 @@ const taskMapSchema = new mongoose.Schema({
 
 const userSchema = new mongoose.Schema({
     name: {
+        type: String,
+        required: true,
+    },
+    username: {
         type: String,
         required: true,
     },
