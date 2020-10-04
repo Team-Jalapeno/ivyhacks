@@ -1,7 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 .App {
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
 
+:root {
+  /* These examples use the same color: sienna. */
+  --ion-primary-color:             #a0522d;
+}
+
+.taskCard {
+  box-shadow: none;
+  background-color: #F6F6F6;
+  border-radius: 0.5rem;
+  color: black;
+}
+
+.bold {
+  font-weight: bold;
+}
+.tom {
+  margin-top: 3.5rem;
+}
+
+.top-head {
+  margin-bottom: 5px !important;
+}
+
+h2 {
+  margin-top: 5px !important;
+}
+.purple {
+  color:#BE9FE1;
+}
+
+.light {
+  font-weight: lighter;
+}
+
+.blur {
+  opacity: 0.5;
+}
+.time {
+  color: grey;
+}
+
+.time-cont *{
+  vertical-align: middle;
+}
+.active {
+  background-color: #BE9FE1;
+}
+
+.centerv {
+  align-items: center;
+}
 .App-logo {
   height: 40vmin;
   pointer-events: none;
@@ -36,4 +90,8 @@
   100% {
     transform: translateY(0px)
   }
+}
+
+.fab-purple button {
+  background-color: #BE9FE1;
 }
